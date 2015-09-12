@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html ng-app="tgMain">
+  <head>
+    <link rel="stylesheet" type="text/css" href="bower_components/bootstrap/dist/css/bootstrap.css"></link>
+    <link rel="stylesheet" type="text/css" href="bower_components/bootstrap/dist/css/bootstrap-theme.css"></link>
+    <!-- Custom stuff after bootstrap to over-ride any css rules. -->
+    <link rel="stylesheet" type="text/css" href="css/app.css"></link>
+    <link rel="stylesheet" type="text/css" href="css/form.css"></link>
+    <link rel="stylesheet" type="text/css" href="css/button.css"></link>
+    <link rel="stylesheet" type="text/css" href="css/colors.css"></link>
+    <link rel="stylesheet" type="text/css" href="css/navbar-modifications.css"></link>
+    <link rel="stylesheet" type="text/css" href="css/well-modifications.css"></link>
+    <link rel="stylesheet" type="text/css" href="css/footer-modifications.css"></link>
+    <link rel="stylesheet" type="text/css" href="css/animate-view.css"></link>
+
+    <script type="text/javascript" src="bower_components/jquery/dist/jquery.js"></script>
+    <script type="text/javascript" src="bower_components/bootstrap/dist/js/bootstrap.js"></script>
+    <script type="text/javascript" src="bower_components/angular/angular.js"></script>
+    <script type="text/javascript" src="bower_components/angular-animate/angular-animate.js"></script>
+    <script type="text/javascript" src="bower_components/angular-route/angular-route.js"></script>
+    <script type="text/javascript" src="bower_components/angular-resource/angular-resource.js"></script>
+
+    <script type="text/javascript" src="js/app.js"></script>
+    <script type="text/javascript" src="js/controllers.js"></script>
+    <script type="text/javascript" src="js/directives.js"></script>
+    <script type="text/javascript" src="js/filters.js"></script>
+    <script type="text/javascript" src="js/tools.js"></script>
+    <script type="text/javascript" src="js/animations.js"></script>
+    <script type="text/javascript" src="js/services/client-side-services.js"></script>
+    <script type="text/javascript" src="js/services/api.js"></script>
+  </head>
+  <body>
+    <div class="wrapper">
+      <header>
+        <tg-navbar></tg-navbar>
+        <tg-well></tg-well>
+      </header>
+      <div class="content-wrapper">
+        <div class="container">
+          <div class="view-container">
+            <div ng-view class="view-frame"></div>
+          </div>
+        </div>
+      </div>
+      <footer>
+        <tg-footer></tg-footer>
+      </footer>
+    </div>
+  </body>
+</html>

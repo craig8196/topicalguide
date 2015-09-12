@@ -1,0 +1,19 @@
+{
+  "version": "2.0.0",
+  "lastUpdated": "today",
+  "apiVersion": "2",
+
+  "maxDocumentsPerRequest": 500,
+  "metadataMeanings": {
+    "unknown": "Unknown",
+    "time": "Time"
+  },
+  "metadataTypes": {
+    "ordinal": "Ordinal",
+    "int": "Integer",
+    "text": "Text",
+    "float": "Float",
+    "datetime": "Date/Time",
+    "bool": "Boolean"
+  }
+}

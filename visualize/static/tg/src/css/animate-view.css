@@ -1,0 +1,92 @@
+/* Animate View Transitions */
+
+.view-container {
+  position: relative;
+}
+
+.view-frame.ng-enter, .view-frame.ng-leave {
+  background: white;
+  position: absolute;
+  top: 0px;
+  left: 0px;
+}
+
+.view-frame.ng-enter {
+  -webkit-animation: 1.0s fade-in;
+  -moz-animation: 1.0s fade-in;
+  -o-animation: 1.0s fade-in;
+  animation: 1.0s fade-in;
+  z-index: 100;
+}
+
+.view-frame.ng-leave {
+  -webkit-animation: 1.0s fade-out;
+  -moz-animation: 1.0s fade-out;
+  -o-animation: 1.0s fade-out;
+  animation: 1.0s fade-out;
+  z-index:99;
+}
+
+@keyframes fade-in {
+  from { opacity: 0; }
+  to { opacity: 1; }
+}
+@-moz-keyframes fade-in {
+  from { opacity: 0; }
+  to { opacity: 1; }
+}
+@-webkit-keyframes fade-in {
+  from { opacity: 0; }
+  to { opacity: 1; }
+}
+
+@keyframes fade-out {
+  from { opacity: 1; }
+  to { opacity: 0; }
+}
+@-moz-keyframes fade-out {
+  from { opacity: 1; }
+  to { opacity: 0; }
+}
+@-webkit-keyframes fade-out {
+  from { opacity: 1; }
+  to { opacity: 0; }
+}
+
+/*.view-container {
+  position:relative;
+  height:100px!important;
+  background:white;
+  border:1px solid black;
+  height:40px;
+  overflow:hidden;
+}
+
+.view-frame {
+  padding:10px;
+}
+
+.view-frame.ng-enter, .view-frame.ng-leave {
+  transition:all cubic-bezier(0.250, 0.460, 0.450, 0.940) 1.5s;
+
+  display:block;
+  width:100%;
+  border-left:1px solid black;
+
+  position:absolute;
+  top:0;
+  left:0;
+  right:0;
+  bottom:0;
+  padding:10px;
+}
+
+.view-frame.ng-enter {
+  left:100%;
+}
+.view-frame.ng-enter.ng-enter-active {
+  left:0;
+}
+.view-frame.ng-leave.ng-leave-active {
+  left:-100%;
+}*/

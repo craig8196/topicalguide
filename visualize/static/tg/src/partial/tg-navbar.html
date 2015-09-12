@@ -1,0 +1,63 @@
+<nav class="navbar navbar-default navbar-static-top">
+  <div class="container-fluid">
+    <div class="navbar-header">
+      <button type="button" class="navbar-toggle collapsed" data-toggle="collapse" data-target="#bs-example-navbar-collapse-1" aria-expanded="false">
+        <span class="sr-only">Toggle navigation</span>
+        <span class="icon-bar"></span>
+        <span class="icon-bar"></span>
+        <span class="icon-bar"></span>
+      </button>
+      <a class="navbar-brand" href="#/home"><span class="gray-green">Topic</span>al Guide</a>
+    </div>
+    <div class="collapse navbar-collapse">
+      <ul class="nav navbar-nav navbar-left navbar-group">
+        <li >
+          <a href="#/datasets">Datasets</a>
+        </li>
+        <li class="dropdown">
+         <a href="" class="dropdown-toggle" data-toggle="dropdown" role="button" aria-haspopup="true" aria-expanded="false">Topic <span class="caret"></span></a>
+         <ul class="dropdown-menu">
+           <li><a href="#/topics/all-topics">All Topics</a></li>
+           <li><a href="#/topics/single-topic">Single Topic</a></li>
+           <li><a href="#/topics/topic-words">Topic Words</a></li>
+         </ul>
+        </li>
+        <li class="dropdown">
+         <a href="" class="dropdown-toggle" data-toggle="dropdown" role="button" aria-haspopup="true" aria-expanded="false">Document <span class="caret"></span></a>
+         <ul class="dropdown-menu">
+           <li><a href="#/document/all-documents">All Documents</a></li>
+           <li><a href="#/document/document-information">Document Information</a></li>
+           <li><a href="#/document/metadata">Metadata</a></li>
+         </ul>
+        </li>
+        <li class="dropdown">
+         <a href="" class="dropdown-toggle" data-toggle="dropdown" role="button" aria-haspopup="true" aria-expanded="false">Visualization <span class="caret"></span></a>
+         <ul class="dropdown-menu">
+           <li><a href="#/visualizations/2d-plots">2D Plots</a></li>
+           <li><a href="#/visualizations/chord-diagram">Chord Diagram</a></li>
+           <li><a href="#/visualizations/topics-over-time">Topics Over Time</a></li>
+           <li><a href="#/visualizations/metadata-map">Metadata Map</a></li>
+           <li><a href="#/visualizations/treemap">Treemap</a></li>
+         </ul>
+        </li>
+        <li class="dropdown">
+         <a href="" class="dropdown-toggle" data-toggle="dropdown" role="button" aria-haspopup="true" aria-expanded="false">ITM <span class="caret"></span></a>
+         <ul class="dropdown-menu">
+           <li><a href="#/itm/analysis-word-constraints">Analysis Word Constraints</a></li>
+         </ul>
+        </li>
+      </ul>
+      <ul class="nav navbar-nav navbar-right navbar-group" ng-controller="SignInLinkController">
+        <li ng-hide="signedIn"><a href="#/sign-in">Sign In</a></li>
+        <li ng-show="signedIn">
+          <a href=""><span class="glyphicon glyphicon-user black"></span> Account</a>
+        </li>
+      </ul>
+      <ul class="nav navbar-nav navbar-right navbar-group">
+        <li><a href=""><span class="glyphicon glyphicon-pencil purple"></span></a></li>
+        <li><a href=""><span class="glyphicon glyphicon-star gold"></span></a></li>
+        <li><a href=""><span class="glyphicon glyphicon-question-sign blue"></span></a></li>
+      </ul>
+    </div>
+  </div>
+</nav>

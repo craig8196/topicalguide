@@ -1,0 +1,39 @@
+/* app css stylesheet */
+
+html,
+body {
+  padding: 0px;
+  margin: 0px;
+  height: 100%;
+}
+
+.wrapper {
+  position: relative;
+  min-height: 100%;
+}
+
+.content-wrapper {
+  padding-top: 10px; /* buffer between content and header */
+  padding-bottom: 77px; /* 67px for the footer, 10px as extra buffering */
+}
+
+.sign-in-form {
+  margin: 0px auto;
+  padding: 20px 30px;
+  border-radius: 5px;
+  border: 1.5px solid lightblue;
+  width: 350px;
+  min-width: 300px;
+  max-width: 400px;
+}
+
+/************************
+ * General Use
+ ************************/
+a.nounderline:hover {
+  text-decoration: none;
+}
+
+.pointer {
+  cursor: pointer;
+}

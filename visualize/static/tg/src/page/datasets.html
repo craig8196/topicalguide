@@ -1,0 +1,87 @@
+<div ng-switch on="status">
+  <div ng-switch-when="loading">
+    <tg-loading></tg-loading>
+  </div>
+  <div ng-switch-when="no-datasets">
+    <div class="panel"><p>No datasets available. See the README file for details or speak with your system administrator.</p></div>
+  </div>
+  <div ng-switch-when="datasets">
+    <h3 class="text-center">Datasets</h3>
+    <p class="text-center">
+      Select a dataset by clicking on one of the bars below.
+      Details of the dataset are shown when selected.
+      Select an analysis by clicking on one.
+      An analysis will turn blue when selected.
+    </p>
+    <div class="panel-group">
+      <div class="datasets-accordion panel panel-default">
+        <div class="panel-heading text-center pointer" data-toggle="collapse" data-parent=".datasets-accordion" href="#collapse-state_of_the_union">
+          <h3 class="panel-title"><b><a class="nounderline black-text-blue-hover">State of the Union</a>&nbsp;<a><span class="glyphicon glyphicon-star-empty gold tg-fav pointer" data-tg-dataset-name="state_of_the_union"></span></a></b></h3>
+        </div>
+        <div id="collapse-state_of_the_union" class="panel-collapse collapse in">
+          <div class="panel-body">
+            <div class="container-fluid">
+              <div class="col-xs-4">
+                <h4>Analyses</h4>
+                <ul class="nav nav-pills nav-stacked">
+                  <li data-tg-analysis-name="lda20topics" class="pointer datasets-analysis-active-element active">
+                    <a>
+                      <span data-tg-analysis-name="lda20topics"><span class="glyphicon glyphicon-star-empty gold"></span></span>&nbsp;<span style="cursor: pointer;">LDA with 20 Topics</span>
+                      <button type="button" class="btn btn-success tg-select datasets-explore" data-tg-analysis-name="lda20topics" style="float: right; padding: 1px 4px;">Explore!</button>
+                    </a>
+                  </li>
+                </ul>
+              </div>
+              <div class="col-xs-8">
+                <h4>Description</h4>
+                <p>This dataset consists of State of the Union messages delivered by the U.S. President to Congress as mandated by the Constitution for the years 1790-2010.</p>
+                <div>
+                  <table class="table table-hover table-condensed">
+                    <thead>
+                      <tr>
+                        <th>Metadata</th>
+                        <th>Value</th>
+                      </tr>
+                    </thead>
+                    <tbody>
+                      <tr>
+                        <td>Source</td><td>WikiSource</td>
+                      </tr>
+                      <tr>
+                        <td>Readable Name</td><td>State of the Union</td>
+                      </tr>
+                      <tr>
+                        <td>Description</td><td>This dataset consists of State of the Union messages delivered by the U.S. President to Congress as mandated by the Constitution for the years 1790-2010.</td>
+                      </tr>
+                      <tr>
+                        <td>Compiled By</td><td>Josh Hansen</td>
+                      </tr>
+                    </tbody>
+                  </table>
+                </div>
+                <div>
+                  <table class="table table-hover table-condensed">
+                    <thead>
+                      <tr>
+                        <th>Metric</th><th>Value</th>
+                      </tr>
+                    </thead>
+                    <tbody>
+                      <tr>
+                        <td>Document Count</td>
+                        <td>223</td>
+                      </tr>
+                    </tbody>
+                  </table>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+  <div ng-switch-default>
+    <tg-error></tg-error>
+  </div>
+</div>

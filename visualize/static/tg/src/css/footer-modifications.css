@@ -1,0 +1,35 @@
+
+
+.footer {
+  border-top: 1.5px solid #e7e7e7;
+  background-image: -webkit-linear-gradient(bottom, #fff 0%, #f8f8f8 100%);
+  background-image: linear-gradient(to top, #fff 0%, #f8f8f8 100%);
+  clear: both;
+  text-align: center;
+  display: block;
+  position: absolute;
+  bottom: 0px;
+  left: 0px;
+  right: 0px;
+  width: 100%;
+  height: 67px;
+  z-index: 100;
+}
+
+.footer-content {
+  padding-top: 0.5em;
+}
+
+.footer p {
+  margin-bottom: 0px;
+}
+
+/* Center nav pills in footer */
+.centered-pills {
+  text-align: text-center;
+  display: inline-block;
+}
+
+.centered-pills > li > a {
+  padding: 4px 10px;
+}

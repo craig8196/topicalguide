@@ -1,0 +1,5 @@
+/* Filters */
+
+(function() {
+  'use strict';
+})();

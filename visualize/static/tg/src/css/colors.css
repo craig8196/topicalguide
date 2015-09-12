@@ -1,0 +1,41 @@
+/* Styles needed by every page */
+
+/* Colors (typically used with the glyphicons) */
+.gold {
+    color: #D4AF37;
+}
+
+.pewter {
+    color: #9D9A96;
+}
+
+.blue {
+    color: #003EFF;
+}
+
+.white {
+    color: #FFFFFF;
+}
+
+.brown {
+    color: #6B4226;
+}
+
+.green {
+    color: green;
+}
+
+.gray-green {
+  color: #5d9f4f;
+}
+
+.purple {
+    color: purple;
+}
+
+.black-text-blue-hover {
+    color: black;
+}
+.black-text-blue-hover:hover {
+    color: blue;
+}

@@ -1,0 +1,17 @@
+.ng-valid.ng-dirty {
+  border-color: rgb(66, 255, 0);
+}
+
+.ng-valid.ng-dirty:focus {
+  border-color: rgb(66, 255, 0);
+  box-shadow: 0px 0px 5px rgb(66, 255, 0);
+}
+
+.ng-invalid.ng-dirty {
+  border-color: rgb(255, 0, 0);
+}
+
+.ng-invalid.ng-dirty:focus {
+  border-color: rgb(255, 0, 0);
+  box-shadow: 0px 0px 5px rgb(255, 0, 0);
+}
