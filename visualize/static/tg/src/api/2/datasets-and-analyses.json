@@ -3,6 +3,14 @@
     "metrics": {
       "Document Count": 223.0
     },
+    "lastUpdated": "2015-06-03 15:45:45.712117+00:00",
+    "metadata": {
+      "Source": "WikiSource",
+      "Compiled By": "Josh Hansen"
+    },
+    "readableName": "State of the Union",
+    "description": "This dataset consists of State of the Union messages delivered by the U.S. President to Congress as mandated by the Constitution for the years 1790-2010.",
+
     "analyses": {
       "lda20topics": {
         "metrics": {
@@ -12,33 +20,20 @@
           "Entropy": 4.307068158732578,
           "Type Count": 30284.0
         },
-        "topic_name_schemes": [
+        "topicNameSchemes": [
           "Top 2",
           "Top 3",
           "Top 4",
           "TF-ITF Top 3"
         ],
-        "last_updated": "2015-06-04 21:38:16.458304+00:00",
+        "lastUpdated": "2015-06-04 21:38:16.458304+00:00",
+        "readableName": "LDA with 20 Topics",
+        "description": "Mallet LDA with 20 topics.",
         "metadata": {
           "num_topics": 20,
           "num_iterations": 10,
-          "readable_name": "LDA with 20 Topics",
           "optimize_interval": 10,
-          "token_regex": "(([^\\W])+([-'\u2019,])?)+([^\\W])+",
-          "description": "Mallet LDA with 20 topics."
-        }
-      },
-      "lda100topics2": {
-        "metrics": {},
-        "topic_name_schemes": [],
-        "last_updated": "2015-06-05 16:40:00.428623+00:00",
-        "metadata": {
-          "num_topics": 20,
-          "num_iterations": 10,
-          "readable_name": "LDA with 20 Topics",
-          "optimize_interval": 10,
-          "token_regex": "(([^\\W])+([-'\u2019,])?)+([^\\W])+",
-          "description": "Mallet LDA with 20 topics."
+          "token_regex": "(([^\\W])+([-'\u2019,])?)+([^\\W])+"
         }
       },
       "lda100topics": {
@@ -49,20 +44,20 @@
           "Entropy": 6.635971416628431,
           "Type Count": 117139.0
         },
-        "topic_name_schemes": [
+        "topicNameSchemes": [
           "Top 2",
           "Top 3",
           "Top 4",
           "TF-ITF Top 3"
         ],
-        "last_updated": "2015-06-03 15:48:31.758955+00:00",
+        "lastUpdated": "2015-06-03 15:48:31.758955+00:00",
+        "readableName": "LDA with 100 Topics",
+        "description": "Mallet LDA with 100 topics.",
         "metadata": {
           "num_topics": 100,
           "num_iterations": 10,
-          "readable_name": "LDA with 100 Topics",
           "optimize_interval": 10,
-          "token_regex": "(([^\\W])+([-'\u2019,])?)+([^\\W])+",
-          "description": "Mallet LDA with 100 topics."
+          "token_regex": "(([^\\W])+([-'\u2019,])?)+([^\\W])+"
         }
       },
       "lda20topics2": {
@@ -73,29 +68,22 @@
           "Entropy": 4.3050946448835905,
           "Type Count": 30284.0
         },
-        "topic_name_schemes": [
+        "topicNameSchemes": [
           "Top 2",
           "Top 3",
           "Top 4",
           "TF-ITF Top 3"
         ],
-        "last_updated": "2015-06-04 22:42:37.814413+00:00",
+        "readableName": "LDA with 20 Topics",
+        "description": "Mallet LDA with 20 topics.",
+        "lastUpdated": "2015-06-04 22:42:37.814413+00:00",
         "metadata": {
           "num_topics": 20,
           "num_iterations": 10,
-          "readable_name": "LDA with 20 Topics",
           "optimize_interval": 10,
-          "token_regex": "(([^\\W])+([-'\u2019,])?)+([^\\W])+",
-          "description": "Mallet LDA with 20 topics."
+          "token_regex": "(([^\\W])+([-'\u2019,])?)+([^\\W])+"
         }
       }
-    },
-    "last_updated": "2015-06-03 15:45:45.712117+00:00",
-    "metadata": {
-      "source": "WikiSource",
-      "readable_name": "State of the Union",
-      "description": "This dataset consists of State of the Union messages delivered by the U.S. President to Congress as mandated by the Constitution for the years 1790-2010.",
-      "compiled by": "Josh Hansen"
     }
   }
 }

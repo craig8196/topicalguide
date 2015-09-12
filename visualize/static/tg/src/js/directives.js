@@ -15,7 +15,10 @@
   app.directive('tgWell', function() {
     return {
       restrict: 'AE',
-      templateUrl: 'partial/tg-well.html'
+      templateUrl: 'partial/tg-well.html',
+      controller: ['$scope', 'selections', function(scope, selections) {
+        scope.selections = selections;
+      }]
     };
   });
 
@@ -56,9 +59,15 @@
   });
 
   app.directive('tgLoading', function() {
+
+    function link() {
+      // TODO vertically center the loading gif
+    }
+
     return {
       restrict: 'E',
-      template: '<p class="text-center"><img src="img/large-spinner.gif"/></p><p class="text-center">Loading...</p>'
+      template: '<p class="text-center"><img src="img/large-spinner.gif"/></p><p class="text-center">Loading...</p>',
+      link: link
     };
   });
 

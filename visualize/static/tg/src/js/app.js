@@ -3,7 +3,16 @@
 (function () {
   'use strict';
 
-  var app = angular.module('tgMain', ['ngAnimate', 'ngRoute', 'tgDirective', 'tgController', 'tgApi2', 'tgClientServices', 'tools']);
+  var app = angular.module('tgMain', [
+    'ngAnimate',
+    'ngRoute',
+    'tgDirective',
+    'tgController',
+    'tgApi2',
+    'tgClientServices',
+    'tgLibrary',
+    'tools'
+  ]);
 
   app.config(['$routeProvider',
     function($routeProvider) {
