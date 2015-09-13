@@ -8,7 +8,13 @@
   app.directive('tgNavbar', function() {
     return {
       restrict: 'AE',
-      templateUrl: 'partial/tg-navbar.html'
+      templateUrl: 'partial/tg-navbar.html',
+      controller: ['$scope', '$location', function(scope, location) {
+        scope.page = location.url();
+        scope.$watch(function() { return location.url(); }, function(newVal, oldVal) {
+          scope.page = location.url();
+        });
+      }]
     };
   });
 

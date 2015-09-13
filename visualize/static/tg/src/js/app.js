@@ -32,21 +32,17 @@
         .when('/terms', {
           templateUrl: 'page/terms.html'
         })
-        .when('/topics/all-topics', {
-          templateUrl: 'page/all-topics.html',
+        .when('/topic/all-topics', {
+          templateUrl: 'page/topic/all-topics.html',
           controller: 'AllTopicsController'
         })
-        .when('/topics/single-topic', {
-          templateUrl: 'page/single-topic.html',
+        .when('/topic/single-topic', {
+          templateUrl: 'page/topic/single-topic.html',
           controller: 'SingleTopicController'
         })
-        .when('/topics/topic-words', {
-          templateUrl: 'page/topic-words.html',
+        .when('/topic/topic-words', {
+          templateUrl: 'page/topic/topic-words.html',
           controller: 'TopicWordsController'
-        })
-        .when('/:menu/:page', {
-          template: '<div ng-switch="page"><div ng-switch-when="p">Hi</div><div ng-switch-when="k">There</div></div>',
-          controller: 'TempController'
         })
         .otherwise({
           redirectTo: '/home'

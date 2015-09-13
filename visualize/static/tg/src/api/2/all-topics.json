@@ -1,0 +1,110 @@
+{
+"metrics": {
+"Token Count": 552202.0,
+"Stopword Count": 0.0,
+"Excluded Word Count": 0.0,
+"Entropy": 6.635971416628431,
+"Type Count": 117139.0
+},
+"topics": {
+"0": {
+"metrics": {
+"Document Entropy": 7.367328801118396,
+"Token Count": 5202.0,
+"Word Entropy": 9.584303721071127,
+"Temperature": 0.009444428117002976,
+"Type Count": 1828.0
+}
+},
+"1": {
+"metrics": {
+"Document Entropy": 7.389400897201597,
+"Token Count": 5562.0,
+"Word Entropy": 9.61911333817351,
+"Temperature": -0.04293264899597645,
+"Type Count": 1869.0
+}
+},
+"2": {
+"metrics": {
+"Document Entropy": 7.487331059059187,
+"Token Count": 5072.0,
+"Word Entropy": 9.640800717475418,
+"Temperature": 0.011988075594846966,
+"Type Count": 1798.0
+}
+},
+"3": {
+"metrics": {
+"Document Entropy": 7.347627158046801,
+"Token Count": 5561.0,
+"Word Entropy": 9.408569038203789,
+"Temperature": -0.07689858829161798,
+"Type Count": 1767.0
+}
+},
+"4": {
+"metrics": {
+"Document Entropy": 7.450115648772708,
+"Token Count": 5493.0,
+"Word Entropy": 9.52388543196629,
+"Temperature": -0.021337445494011106,
+"Type Count": 1762.0
+}
+},
+"5": {
+"metrics": {
+"Document Entropy": 7.376226295861917,
+"Token Count": 5439.0,
+"Word Entropy": 9.293681255287188,
+"Temperature": 0.050764766046467985,
+"Type Count": 1727.0
+}
+},
+"6": {
+"metrics": {
+"Document Entropy": 7.319929055845945,
+"Token Count": 6173.0,
+"Word Entropy": 8.95129629715694,
+"Temperature": -0.03948451356067567,
+"Type Count": 1671.0
+}
+},
+"7": {
+"metrics": {
+"Document Entropy": 7.380453754416949,
+"Token Count": 5028.0,
+"Word Entropy": 9.65293442572211,
+"Temperature": 0.041232399283128704,
+"Type Count": 1786.0
+}
+},
+"8": {
+"metrics": {
+"Document Entropy": 7.406375720359999,
+"Token Count": 5480.0,
+"Word Entropy": 9.63466674451651,
+"Temperature": 0.017634040889669796,
+"Type Count": 1850.0
+}
+},
+"9": {
+"metrics": {
+"Document Entropy": 7.256688478826849,
+"Token Count": 5745.0,
+"Word Entropy": 9.404833908308262,
+"Temperature": -0.08346233047787625,
+"Type Count": 1754.0
+}
+},
+"10": {
+"metrics": {
+"Document Entropy": 7.3344231248295895,
+"Token Count": 5756.0,
+"Word Entropy": 9.560015696348199,
+"Temperature": -0.07113766348815187,
+"Type Count": 1827.0
+}
+}
+}
+}
