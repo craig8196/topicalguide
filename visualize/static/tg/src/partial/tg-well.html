@@ -2,10 +2,10 @@
   <table class="well-table">
     <tbody>
       <tr>
-        <td>Dataset:&nbsp;<span class="blue">{{ selections.dataset || 'No dataset selected' }}</span></td>
-        <td>Analysis:&nbsp;<span class="blue">{{ selections.analysis || 'No analysis selected' }}</span></td>
-        <td>Topic:&nbsp;<span class="blue">{{ selections.topic || 'No topic selected' }}</span></td>
-        <td>Document:&nbsp;<span class="blue">{{ selections.document || 'No document selected' }}</span></td>
+        <td>Dataset:&nbsp;<span class="blue">{{ selections.getDatasetName() || 'No dataset selected' }}</span></td>
+        <td>Analysis:&nbsp;<span class="blue">{{ selections.getAnalysisName() || 'No analysis selected' }}</span></td>
+        <td>Topic:&nbsp;<span class="blue">{{ selections.getTopicName() || 'No topic selected' }}</span></td>
+        <td>Document:&nbsp;<span class="blue">{{ selections.getDocumentName() || 'No document selected' }}</span></td>
       </tr>
     </tbody>
   </table>

@@ -18,24 +18,32 @@
     </p>
     <div class="panel-group">
       <div ng-repeat="(datasetKey, datasetValue) in datasets" class="datasets-accordion panel panel-default">
-        <div class="panel-heading text-center pointer" data-toggle="collapse" data-parent=".datasets-accordion" href="#collapse-{{ datasetKey }}">
+        <div class="panel-heading text-center pointer" data-toggle="collapse" data-parent=".datasets-accordion" href="#collapse-{{ datasetKey }}" ng-click="clickSelectDataset(datasetKey)">
           <h3 class="panel-title"><b><a class="nounderline black-text-blue-hover">{{ datasetValue.readableName }}</a>&nbsp;<a><tg-fav tg-fav-type="dataset"></tg-fav></a></b></h3>
         </div>
-        <div id="collapse-{{ datasetKey }}" class="panel-collapse collapse in">
+        <div id="collapse-{{ datasetKey }}" class="panel-collapse collapse" ng-class="{in: selections.isDatasetSelected(datasetKey)}">
           <div class="panel-body">
             <div class="container-fluid">
               <div class="col-xs-4">
-                <div ng-hide="datasetValue.analyses">
-                  <p>No analyses available for this dataset. Import one by following directions in the README.</p>
+                <div ng-hide="{{ !isMapEmpty(datasetValue.analyses) }}">
+                  <p>No analyses available for this dataset. Import one by following directions in the README or speaking with your system administrator.</p>
                 </div>
-                <div ng-show="datasetValue.analyses">
+                <div ng-show="{{ !isMapEmpty(datasetValue.analyses) }}">
                   <h4>Analyses</h4>
                   <ul class="nav nav-pills nav-stacked">
-                    <li ng-repeat="(analysisKey, analysisValue) in datasetValue.analyses" class="pointer" ng-class="{active: isAnalysisSelected(analysisKey)}">
-                      <a ng-click="selectAnalysis(analysisKey)">
-                        <span><tg-fav tg-fav-type="analysis"></tg-fav></span>&nbsp;<span class="pointer">{{ analysisValue.readableName }}</span>
-                        <button type="button" class="btn btn-success" style="float: right; padding: 1px 4px;" ng-click="clickExploreAnalysis(analysisKey)">Explore!</button>
-                      </a>
+                    <li ng-repeat="(analysisKey, analysisValue) in datasetValue.analyses" class="pointer" ng-class="{active: selections.isAnalysisSelected(datasetKey, analysisKey)}">
+                      <span class="span-pill" ng-click="clickSelectAnalysis(analysisKey)">
+                        <table class="width-100">
+                          <tr>
+                            <td class="text-left">
+                              <tg-fav tg-fav-type="analysis"></tg-fav>&nbsp;<span class="pointer">{{ analysisValue.readableName }}</span>
+                            </td>
+                            <td class="text-right">
+                              <a href="#/home" class="explore-link">Explore!</a>
+                            </td>
+                          </tr>
+                        </table>
+                      </span>
                     </li>
                   </ul>
                 </div>

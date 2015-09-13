@@ -7,23 +7,22 @@
 
   mod.directive('tgKeyValueTable', function() {
     var template =
-      '<table class="table table-hover table-condensed">'+
-      '<thead><tr><th>{{ tgKeyHeader }}</th><th>{{ tgValueHeader }}</th></tr></thead>'+
-      '<tbody><tr ng-repeat="(k, v) in tgMap" ><td>{{ k }}</td><td>{{ v }}</td></tr></tbody>'+
+      '<table ng-show="show" class="table table-hover table-condensed">'+
+      '<thead><tr><th>{{ keyHeader }}</th><th>{{ valueHeader }}</th></tr></thead>'+
+      '<tbody><tr ng-repeat="(k, v) in map" ><td>{{ k }}</td><td>{{ v }}</td></tr></tbody>'+
       '</table>';
 
     return {
       restrict: 'E',
       scope: {
-        tgMap: '=',
-        tgKeyHeader: '@',
-        tgValueHeader: '@'
+        map: '=tgMap',
+        keyHeader: '@tgKeyHeader',
+        valueHeader: '@tgValueHeader'
       },
       template: template,
-      controller: function($scope) {
-        console.log($scope);
-        console.log($scope.tgMap);
-      }
+      controller: ['$scope', 'jsLib', function(scope, js) {
+        scope.show = !js.isMapEmpty(scope.map);
+      }]
     };
   });
 

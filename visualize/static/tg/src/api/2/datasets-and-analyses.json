@@ -85,5 +85,63 @@
         }
       }
     }
+  },
+
+  "1": {
+    "metrics": {
+      "Token Count": 552202.0,
+      "Stopword Count": 0.0
+    },
+    "lastUpdated": "2015-06-03 15:45:45.712117+00:00",
+    "metadata": {
+    },
+    "readableName": "Fake Dataset",
+    "description": "",
+    "analyses": {
+      "0": {
+        "metrics": {
+          "Token Count": 552202.0,
+          "Stopword Count": 0.0
+        },
+        "topicNameSchemes": [
+          "Top 2",
+          "Top 3",
+          "Top 4",
+          "TF-ITF Top 3"
+        ],
+        "lastUpdated": "2015-06-03 15:48:31.758955+00:00",
+        "readableName": "Zeroeth Topic",
+        "description": "",
+        "metadata": {
+          "optimize_interval": 10,
+          "token_regex": "(([^\\W])+([-'\u2019,])?)+([^\\W])+"
+        }
+      },
+      "dirt": {
+        "metrics": {
+        },
+        "topicNameSchemes": [
+          "Top 2",
+          "Top 3",
+          "Top 4",
+          "TF-ITF Top 3"
+        ],
+        "readableName": "Worst Analysis Ever",
+        "description": "Bogus description.",
+        "lastUpdated": "2015-06-04 22:42:37.814413+00:00",
+        "metadata": {
+        }
+      }
+    }
+  },
+  "2": {
+    "readableName": "No Analyses?",
+    "analyses": {
+    },
+    "metrics": {
+    },
+    "lastUpdated": "2015-06-03 15:45:45.712117+00:00",
+    "metadata": {
+    }
   }
 }

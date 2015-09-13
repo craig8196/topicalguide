@@ -30,4 +30,26 @@
 
     return strLib;
   });
+
+  /**
+   * [factory description]
+   * @param  {[type]} 'jsLib' [description]
+   * @param  {[type]}         [description]
+   * @return {[type]}         [description]
+   */
+  lib.factory('jsLib', function() {
+    var jsLib = {};
+
+    function isMapEmpty(m) {
+      var result = true;
+      for(var k in m) {
+        result = false;
+        break;
+      }
+      return result;
+    }
+
+    jsLib.isMapEmpty = isMapEmpty;
+    return jsLib;
+  });
 })();
