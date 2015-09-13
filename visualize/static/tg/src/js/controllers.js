@@ -19,11 +19,9 @@
 
     api.getDatasetsAndAnalyses()
       .then(function(result) {
-        console.log(result);
         scope.datasets = result.data;
         scope.status = scope.datasets? 'datasets': 'no-datasets';
       }, function(reason) {
-        console.log(reason);
         scope.status = 'error';
       });
 

@@ -66,13 +66,21 @@
 
   app.directive('tgLoading', function() {
 
-    function link() {
-      // TODO vertically center the loading gif
+    function link(scope, element, attrs) {
+      try { // Try to vertically center the loading symbol.
+        var wrapper = element.parents('.wrapper');
+        var header = wrapper.find('header');
+        var footer = wrapper.find('.footer');
+        var totalHeight = wrapper[0].clientHeight - header[0].clientHeight - footer[0].clientHeight;
+        var loadingHeight = 128;
+        var offset = (totalHeight - loadingHeight)/2;
+        element.find('#tg-loading').css('margin-top', offset);
+      } catch(err) {}
     }
 
     return {
       restrict: 'E',
-      template: '<p class="text-center"><img src="img/large-spinner.gif"/></p><p class="text-center">Loading...</p>',
+      template: '<p id="tg-loading" class="text-center"><img src="img/large-spinner.gif"/></p>',
       link: link
     };
   });
