@@ -1,1 +1,21 @@
-all-topics
+<div ng-switch on="status" class="col-xs-12">
+  <div ng-switch-when="loading">
+    <tg-loading></tg-loading>
+  </div>
+
+  <div ng-switch-when="error">
+    <tg-error></tg-error>
+  </div>
+
+  <div ng-switch-when="show">
+    <h2 class="text-center">All Topics</h2>
+    <tg-sortable-table
+      tg-header="header"
+      tg-header-sort="headerSort"
+      tg-row-content="rowContent"
+      tg-sort-values="sortValues"
+    ></tg-sortable-table>
+  </div>
+
+  <tg-force-width></tg-force-width>
+</div>

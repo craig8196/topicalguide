@@ -1,0 +1,16 @@
+
+span#my-text-id.my-text-class {
+  color: green;
+}
+
+#my-text-id.my-text-class {
+  color: blue;
+}
+
+#my-text-id {
+  color: orange;
+}
+
+span {
+  color: red;
+}

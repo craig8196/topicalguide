@@ -3,16 +3,16 @@
 (function() {
   'use strict';
 
-  var app = angular.module('tgController', [
+  var mod = angular.module('tgController', [
     'ngRoute',
     'tgLibrary'
   ]);
 
-  app.controller('HomeController', ['$scope', '$log', function($scope, $log){
+  mod.controller('HomeController', ['$scope', '$log', function($scope, $log){
     $scope.page = 'home';
   }]);
 
-  app.controller('DatasetsController', ['$scope', 'api2', 'strLib', 'selections', 'jsLib', function(scope, api, str, selections, js) {
+  mod.controller('DatasetsController', ['$scope', 'api2', 'strLib', 'selections', 'jsLib', function(scope, api, str, selections, js) {
     scope.datasets = {};
     scope.status = 'loading';
     scope.selections = selections;
@@ -43,19 +43,47 @@
     scope.isMapEmpty = js.isMapEmpty;
   }]);
 
-  app.controller('TempController', ['$scope', '$log', '$routeParams', '$location', function($scope, $log, $routeParams, $location){
-    console.log($routeParams);
-    $scope.page = $routeParams.page;
-    $routeParams.page = 'k';
-    $location.search('hi', 'there');
+  mod.controller('AllTopicsController', ['$scope', 'selections', 'api2', function(scope, selections, api) {
+    scope.analysisMetrics = {};
+    scope.topicMetrics = [];
+    scope.status = 'loading';
+    scope.header = ['', '#', 'Name', '% of Corpus', 'Word Entropy', 'Document Entropy', 'Temperature', ''];
+    scope.headerSort = [false, true, true, true, true, true, true, false];
+
+    api.getAnalysisAndTopicMetrics(selections.dataset, selections.analysis)
+      .then(success, failure);
+    function success(result) {
+      var analysisMetrics = result.data.metrics;
+      var topics = result.data.topics;
+      var topicMetrics = [];
+      for(var topicId in topics) {
+        topics[topicId].topicId = topicId;
+        topicMetrics.push(topics[topicId]);
+      }
+      scope.analysisMetrics = analysisMetrics;
+      scope.topicMetrics = topicMetrics;
+      console.log(scope.analysisMetrics);
+      console.log(scope.topicMetrics);
+      scope.status = 'show';
+    }
+    function failure(reason) {
+      scope.status = 'error';
+    }
   }]);
 
-  app.controller('SignInController', ['$scope', 'authentication', function($scope, authentication) {
-    $scope.signedIn = authentication.signedIn;
+  mod.controller('TempController', ['$scope', '$log', '$routeParams', '$location', function(scope, log, routeParams, location){
+    console.log(routeParams);
+    scope.page = routeParams.page;
+    routeParams.page = 'k';
+    location.search('hi', 'there');
   }]);
 
-  app.controller('SignInLinkController', ['$scope', 'authentication', function($scope, authentication) {
-    $scope.signedIn = authentication.signedIn;
+  mod.controller('SignInController', ['$scope', 'authentication', function(scope, authentication) {
+    scope.signedIn = authentication.signedIn;
+  }]);
+
+  mod.controller('SignInLinkController', ['$scope', 'authentication', function(scope, authentication) {
+    scope.signedIn = authentication.signedIn;
   }]);
 
 })();

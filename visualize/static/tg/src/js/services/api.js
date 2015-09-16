@@ -16,8 +16,13 @@
         return $http.get('api/2/datasets-and-analyses.json');
       }
 
+      function getAnalysisAndTopicMetrics(dataset, analysis) {
+        return $http.get('api/2/all-topics.json');
+      }
+
       api.getServerInfo = getServerInfo;
       api.getDatasetsAndAnalyses = getDatasetsAndAnalyses;
+      api.getAnalysisAndTopicMetrics = getAnalysisAndTopicMetrics;
       return api;
     }]);
 })();

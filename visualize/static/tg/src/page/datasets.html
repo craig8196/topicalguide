@@ -1,11 +1,12 @@
-<div ng-switch on="status">
-
+<div ng-switch on="status" class="col-xs-12">
   <div ng-switch-when="loading">
     <tg-loading></tg-loading>
   </div>
 
   <div ng-switch-when="no-datasets">
-    <div class="panel"><p>No datasets available. See the README file for details or speak with your system administrator.</p></div>
+    <div class="panel">
+      <p>No datasets available. See the README file for details or speak with your system administrator.</p>
+    </div>
   </div>
 
   <div ng-switch-when="datasets">
@@ -31,15 +32,15 @@
                 <div ng-show="{{ !isMapEmpty(datasetValue.analyses) }}">
                   <h4>Analyses</h4>
                   <ul class="nav nav-pills nav-stacked">
-                    <li ng-repeat="(analysisKey, analysisValue) in datasetValue.analyses" class="pointer" ng-class="{active: selections.isAnalysisSelected(datasetKey, analysisKey)}">
-                      <span class="span-pill" ng-click="clickSelectAnalysis(analysisKey)">
+                    <li ng-repeat="(analysisKey, analysisValue) in datasetValue.analyses" class="pointer">
+                      <span class="span-pill" ng-click="clickSelectAnalysis(analysisKey)" ng-class="{active: selections.isAnalysisSelected(datasetKey, analysisKey)}">
                         <table class="width-100">
                           <tr>
                             <td class="text-left">
                               <tg-fav tg-fav-type="analysis"></tg-fav>&nbsp;<span class="pointer">{{ analysisValue.readableName }}</span>
                             </td>
                             <td class="text-right">
-                              <a href="#/topic/all-topics" class="explore-link">Explore!</a>
+                              <a href="#/topic-all" class="explore-link">Explore!</a>
                             </td>
                           </tr>
                         </table>
@@ -75,4 +76,5 @@
     <tg-error></tg-error>
   </div>
 
+  <tg-force-width></tg-force-width>
 </div>

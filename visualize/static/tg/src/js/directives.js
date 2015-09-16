@@ -3,9 +3,9 @@
 (function() {
   'use strict';
 
-  var app = angular.module('tgDirective', ['tgApi2', 'ngRoute']);
+  var mod = angular.module('tgDirective', ['tgApi2', 'ngRoute']);
 
-  app.directive('tgNavbar', function() {
+  mod.directive('tgNavbar', function() {
     return {
       restrict: 'AE',
       templateUrl: 'partial/tg-navbar.html',
@@ -18,7 +18,7 @@
     };
   });
 
-  app.directive('tgWell', function() {
+  mod.directive('tgWell', function() {
     return {
       restrict: 'AE',
       templateUrl: 'partial/tg-well.html',
@@ -28,12 +28,11 @@
     };
   });
 
-  app.directive('tgFooter', function() {
+  mod.directive('tgFooter', function() {
     return {
       restrict: 'AE',
       templateUrl: 'partial/tg-footer.html',
       controller: ['$scope', 'api2', function($scope, api) {
-        console.log('hello');
         $scope.version = 'Loading...';
         $scope.lastUpdated = 'Loading...';
         api.getServerInfo()
@@ -46,42 +45,6 @@
             $scope.lastUpdated = '';
           });
       }]
-    };
-  });
-
-  app.directive('tgError', function() {
-    return {
-      restrict: 'E',
-      templateUrl: 'partial/tg-error.html'
-    };
-  });
-
-  app.directive('tgSignIn', function() {
-    return {
-      restrict: 'E',
-      templateUrl: 'partial/tg-sign-in.html',
-      controller: 'SignInController'
-    };
-  });
-
-  app.directive('tgLoading', function() {
-
-    function link(scope, element, attrs) {
-      try { // Try to vertically center the loading symbol.
-        var wrapper = element.parents('.wrapper');
-        var header = wrapper.find('header');
-        var footer = wrapper.find('.footer');
-        var totalHeight = wrapper[0].clientHeight - header[0].clientHeight - footer[0].clientHeight;
-        var loadingHeight = 128;
-        var offset = (totalHeight - loadingHeight)/2;
-        element.find('#tg-loading').css('margin-top', offset);
-      } catch(err) {}
-    }
-
-    return {
-      restrict: 'E',
-      template: '<p id="tg-loading" class="text-center"><img src="img/large-spinner.gif"/></p>',
-      link: link
     };
   });
 

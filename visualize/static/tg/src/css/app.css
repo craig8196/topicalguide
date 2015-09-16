@@ -38,11 +38,15 @@ a.nounderline:hover {
   cursor: pointer;
 }
 
+.nowrap {
+  white-space: nowrap;
+}
+
 /**
  * Datasets CSS
  */
 .span-pill {
-  border-radius: 4px;
+  border-radius: 5px;
   display: block;
   padding: 10px 15px;
   color: blue;
@@ -50,6 +54,11 @@ a.nounderline:hover {
 
 .span-pill:hover {
   background-color: #eeeeee;
+}
+
+.span-pill.active {
+  background-color: rgb(54, 68, 255);
+  color: white;
 }
 
 .explore-link {

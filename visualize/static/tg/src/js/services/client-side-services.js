@@ -34,6 +34,11 @@
       }
 
       function isAnalysisSelected(dataset, analysis) {
+        console.log(dataset);
+        console.log(analysis);
+        console.log(selections);
+        console.log(selections.dataset === dataset);
+        console.log(selections.analysis === analysis);
         return selections.dataset === dataset && selections.analysis === analysis? true: false;
       }
 
