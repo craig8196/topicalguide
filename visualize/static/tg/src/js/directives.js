@@ -12,7 +12,7 @@
       controller: ['$scope', '$location', function(scope, location) {
         scope.page = location.url();
         scope.$watch(function() { return location.url(); }, function(newVal, oldVal) {
-          scope.page = location.url();
+          scope.page = newVal;
         });
       }]
     };
@@ -32,17 +32,24 @@
     return {
       restrict: 'AE',
       templateUrl: 'partial/tg-footer.html',
-      controller: ['$scope', 'api2', function($scope, api) {
-        $scope.version = 'Loading...';
-        $scope.lastUpdated = 'Loading...';
+      controller: ['$scope', 'api2', '$location', function(scope, api, location) {
+        scope.version = 'Loading...';
+        scope.lastUpdated = 'Loading...';
+        scope.page = location.url();
+
+        scope.$watch(function() { return location.url(); }, function(newVal, oldVal) {
+          scope.page = newVal;
+          console.log(scope.page);
+        });
+
         api.getServerInfo()
           .then(function(response) {
             var info = response.data;
-            $scope.version = info.version;
-            $scope.lastUpdated = info.lastUpdated;
+            scope.version = info.version;
+            scope.lastUpdated = info.lastUpdated;
           }, function(reason) {
-            $scope.version = '';
-            $scope.lastUpdated = '';
+            scope.version = '';
+            scope.lastUpdated = '';
           });
       }]
     };

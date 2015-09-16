@@ -2,7 +2,7 @@
 ### TODO:
 
 - Create server side of api and static file serving
-- Start/Create cassandra database for testing
+- Start/Create cassandra database and setups for dev/production
 - Start topics page
 - Figure out how to make popover appear for analyses on datasets page
 - Bind the selections with the location search criterion
